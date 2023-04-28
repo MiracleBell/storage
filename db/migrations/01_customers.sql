@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS customer (
+    id BIGINT NOT NULL,
+    name VARCHAR NOT NULL,
+
+)
