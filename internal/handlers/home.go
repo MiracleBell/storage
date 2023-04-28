@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	u "../middleware/users"
+	u "../middleware/auth"
 	checker "../utils"
 	"net/http"
 )

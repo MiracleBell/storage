@@ -1,4 +1,4 @@
-package handlers
+package orders
 
 import "net/http"
 

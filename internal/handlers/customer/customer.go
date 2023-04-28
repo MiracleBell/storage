@@ -1,8 +1,7 @@
-package handlers
+package customer
 
 import (
-	. "../middleware/users"
-	. "../utils"
+	. "../../middleware/auth"
 	"net/http"
 )
 
@@ -15,10 +14,6 @@ func GetCustomerById(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetCustomers(w http.ResponseWriter, r *http.Request) {
-	if !IsGetMethod(r) {
-		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		return
-	}
 
 	cookie, err := r.Cookie("token")
 	if err != nil || !IsAuth(cookie) {

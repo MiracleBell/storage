@@ -1,8 +1,8 @@
-package users
+package auth
 
 import (
 	. "../../models/users"
-	checker "../../utils"
+	. "../../utils"
 	"encoding/json"
 	"net/http"
 )
@@ -10,7 +10,7 @@ import (
 var isAuth bool
 
 func Login(w http.ResponseWriter, r *http.Request) {
-	if !checker.IsPostMethod(r) {
+	if !IsPostMethod(r) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -32,7 +32,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 }
 
 func Logout(w http.ResponseWriter, r *http.Request) {
-	if !checker.IsDeleteMethod(r) {
+	if !IsDeleteMethod(r) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
