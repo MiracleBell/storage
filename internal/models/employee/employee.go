@@ -1,7 +1,11 @@
 package employee
 
-import . ".."
+import . "../storage"
 import . "../users"
+
+type Position struct {
+	name string
+}
 
 type Employee struct {
 	ID         uint64

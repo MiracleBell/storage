@@ -1,4 +1,6 @@
-package models
+package storage
+
+import . "../goods"
 
 type GoodsMap struct {
 	count int
@@ -8,5 +10,5 @@ type GoodsMap struct {
 type Storage struct {
 	ID     uint64
 	region int
-	goods  GoodsMap
+	goods  []GoodsMap
 }

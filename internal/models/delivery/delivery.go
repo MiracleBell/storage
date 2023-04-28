@@ -1,6 +1,7 @@
-package orders
+package delivery
 
 import "time"
+import . "../orders"
 
 type DeliveryService struct {
 	name string

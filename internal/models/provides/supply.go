@@ -1,7 +1,13 @@
 package provides
 
 import "time"
-import . ".."
+import . "../storage"
+import . "../goods"
+
+type SupplyMap struct {
+	goods Goods
+	count int
+}
 
 type Supply struct {
 	ID                   uint64
@@ -9,5 +15,5 @@ type Supply struct {
 	expectedDeliveryDate time.Time
 	realDeliveryDate     time.Time
 	storage              Storage
-	goods                []Goods
+	detail               []SupplyMap
 }
