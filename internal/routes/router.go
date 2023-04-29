@@ -2,6 +2,7 @@ package routes
 
 import (
 	. "../handlers"
+	. "../middleware/auth"
 	. "./auth"
 	. "./customer"
 	. "./employee"
@@ -15,6 +16,10 @@ import (
 func MainRouter() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	http.Handle(
+		"/",
+		RequireTokenAuthentication(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})),
+	)
 
 	http.HandleFunc("/", StartPage)
 
