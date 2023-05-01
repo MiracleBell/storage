@@ -5,9 +5,9 @@ import . "../detail"
 
 type Provider struct {
 	ID                  uint64
-	bankDetails         BankDetails
-	organizationName    string
-	organizationAddress string
-	contactPerson       string
-	products            []Goods
+	BankDetails         BankDetails
+	OrganizationName    string
+	OrganizationAddress string
+	ContactPerson       string
+	Products            []Goods
 }

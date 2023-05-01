@@ -1,7 +1,7 @@
 package Detail
 
 type BankDetails struct {
-	recipient             string
-	recipientsBankName    string
-	recipientsBankAddress string
+	Recipient             string
+	RecipientsBankName    string
+	RecipientsBankAddress string
 }

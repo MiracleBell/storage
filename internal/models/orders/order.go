@@ -5,17 +5,17 @@ import . "../goods"
 
 type OrderStatus struct {
 	ID   uint64
-	name string
+	Name string
 }
 
 type OrderGoods struct {
-	goods Goods
-	count int
+	Goods Goods
+	Count int
 }
 
 type Order struct {
 	ID          uint64
-	orderStatus OrderStatus
-	customer    Customer
-	card        []OrderGoods
+	OrderStatus OrderStatus
+	Customer    Customer
+	Card        []OrderGoods
 }

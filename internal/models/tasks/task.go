@@ -25,13 +25,13 @@ const (
 
 type Task struct {
 	ID                 uint64
-	typeName           TaskType
-	status             TaskStatus
-	description        string
-	orderingManager    Employee
-	processingEmployee Employee
-	orderingDate       time.Time
-	deadlineDate       time.Time
-	endDate            time.Time
-	order              Order
+	TypeName           TaskType
+	Status             TaskStatus
+	Description        string
+	OrderingManager    Employee
+	ProcessingEmployee Employee
+	OrderingDate       time.Time
+	DeadlineDate       time.Time
+	EndDate            time.Time
+	Order              Order
 }

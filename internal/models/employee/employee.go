@@ -9,10 +9,10 @@ type Position struct {
 
 type Employee struct {
 	ID         uint64
-	position   Position
-	firstName  string
-	lastName   string
-	patronymic string
-	user       User
-	storage    Storage
+	Position   Position
+	FirstName  string
+	LastName   string
+	Patronymic string
+	User       User
+	Storage    Storage
 }

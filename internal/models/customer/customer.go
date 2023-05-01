@@ -11,7 +11,7 @@ const (
 
 type Customer struct {
 	ID           uint64
-	customerType CustomerType
+	CustomerType CustomerType
 	Email        string
 	CreatedAt    time.Time
 	UpdatedAt    time.Time

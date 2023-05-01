@@ -2,6 +2,6 @@ package goods
 
 type Goods struct {
 	ID          uint64
-	name        string
-	description string
+	Name        string
+	Description string
 }
