@@ -1,7 +1,6 @@
 package routes
 
 import (
-	. "../handlers"
 	. "../middleware/auth"
 	. "./auth"
 	. "./customer"
@@ -21,7 +20,7 @@ func MainRouter() {
 		RequireTokenAuthentication(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})),
 	)
 
-	http.HandleFunc("/", StartPage)
+	//http.HandleFunc("/", StartPage)
 
 	http.HandleFunc("/login", LoginRouter)
 	http.HandleFunc("/logout", LogoutRouter)

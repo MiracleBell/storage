@@ -50,6 +50,7 @@ func RequireTokenAuthentication(next http.Handler) http.Handler {
 			if err != nil {
 				// Если куки не найдены, возвращаем ошибку
 				http.Error(w, "Unauthorized", http.StatusUnauthorized)
+				http.Redirect(w, r, "/login", http.StatusUnauthorized)
 				return
 			}
 			if !IsAuth(cookie) {
