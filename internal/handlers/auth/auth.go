@@ -1,8 +1,8 @@
 package auth
 
 import (
-	. "../../middleware/auth"
 	. "../../models/users"
+	. "../../services/auth"
 	"encoding/json"
 	"net/http"
 )

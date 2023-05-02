@@ -1,24 +1,25 @@
-package customer
+package customers
 
 import (
-	. "../../middleware/auth"
+	. "../../services/customers"
+	"encoding/json"
 	"net/http"
 )
 
-func PostCustomer(w http.ResponseWriter, r *http.Request) {
-
-}
-
 func GetCustomerById(w http.ResponseWriter, r *http.Request) {
-
+	var id uint64
+	json.NewDecoder(r.Body).Decode(&id)
+	user, err := GetById(id)
+	if err != nil {
+		json.NewEncoder(w).Encode(err)
+	}
+	json.NewEncoder(w).Encode(user)
 }
 
 func GetCustomers(w http.ResponseWriter, r *http.Request) {
-
-	cookie, err := r.Cookie("token")
-	if err != nil || !IsAuth(cookie) {
-		http.Redirect(w, r, "/login", http.StatusFound)
-		return
+	users, err := GetAllCustomers()
+	if err != nil {
+		json.NewEncoder(w).Encode(err)
 	}
-
+	json.NewEncoder(w).Encode(users)
 }

@@ -3,9 +3,9 @@ package customer
 import . "../detail"
 
 type Organization struct {
-	customer            Customer
-	organizationName    string
-	organizationAddress string
-	contactPerson       string
-	bankDetails         BankDetails
+	Customer            Customer
+	OrganizationName    string
+	OrganizationAddress string
+	ContactPerson       string
+	BankDetails         BankDetails
 }
