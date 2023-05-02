@@ -1,7 +1,7 @@
-package employee
+package employees
 
 import (
-	. "../../handlers/emploee"
+	. "../../handlers/employees"
 	"net/http"
 )
 

@@ -4,10 +4,10 @@ import (
 	. "../middleware/auth"
 	. "./auth"
 	. "./customer"
-	. "./employee"
+	. "./employees"
 	. "./goods"
 	. "./orders"
-	. "./store"
+	. "./storages"
 	. "./tasks"
 	"net/http"
 )

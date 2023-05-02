@@ -1,6 +1,6 @@
 package customer
 
-import . "../../handlers/customer"
+import . "../../handlers/customers"
 import "net/http"
 
 func CustomerRouter(w http.ResponseWriter, r *http.Request) {

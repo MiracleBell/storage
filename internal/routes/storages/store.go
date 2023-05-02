@@ -1,6 +1,6 @@
-package store
+package storages
 
-import . "../../handlers/storage"
+import . "../../handlers/storages"
 import "net/http"
 
 func StoreRouter(w http.ResponseWriter, r *http.Request) {
